@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Novis - Committed to the Australian Pressure Care Industry and Community</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'novis-blue': '#003366',
+                            'novis-light-blue': '#1A73E8',
+                        }
+                    }
+                }
+            }
+        </script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                scroll-behavior: smooth;
+            }
+
+            .hero-image-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                gap: 8px;
+                height: 400px;
+            }
+
+            .hero-image-grid img {
+                object-fit: cover;
+                border-radius: 8px;
+            }
+
+            .hero-image-1 {
+                grid-row: 1 / 3;
+            }
+
+            .hero-image-2 {
+                grid-row: 1;
+            }
+
+            .hero-image-3 {
+                grid-row: 2;
+            }
+
+            .hero-image-4 {
+                /* grid-row: 3;
+                grid-column: 1 / 3; */
+            }
+
+            h2 {
+                font-size: 24px;
+                line-height: 150%;
+                font-weight: 700;
+                color: #252525;
+                margin: 0;
+            }
+
+            .service_title {
+                color: #FFFFFF;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 70%;
+                text-align: center;
+            }
+
+            .img-shadow {
+                box-shadow: 1px 2px 13px #01000130;
+            }
+
+        </style>
+    </head>
+
+    <body class="bg-white">
+        <!-- Top Info Bar -->
+        <div class="bg-novis-blue text-white text-sm px-8 py-2">
+            <div class="container mx-auto px-4 flex flex-wrap justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <span class="font-semibold">
+                        <img src="./assets/top-logo.png" alt="Ndis" class="h-5 inline-block mr-2 w-auto">
+                        Registered Provider 405 001 869 111</span>
+                </div>
+                <div class="flex items-center space-x-4 font-semibold">
+                    <a href="#" class="hover:text-blue-200"> <i class="fa-solid fa-location-dot mr-1"></i> Store
+                        Locator</a>
+                    <a href="#" class="hover:text-blue-200">Resources</a>
+                    <a href="#" class="hover:text-blue-200"> <i class="fa-solid fa-phone mr-1"></i> 1300 738 885</a>
+                    <a href="#" class="text-[#002B64] font-semibold bg-white py-2 px-4 rounded"> <i
+                            class="fa-solid fa-cart-shopping mr-1"></i> Online Store</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <!-- <div class="bg-[linear-gradient(45deg,#CEE7FE,#CEE7FF,white)]"> -->
+        <nav class="sticky top-0 z-50 bg-[linear-gradient(90deg,#CEE7FE,#CEE7FF,white)] px-8">
+            <div class=" container mx-auto px-4">
+                <div class="flex justify-between items-center py-4">
+                    <div class="flex items-center">
+                        <img src="./assets/logo.png" alt="Novis" class="h-12">
+                    </div>
+
+                    <!-- Desktop Menu -->
+                    <div class="hidden lg:flex items-center space-x-8">
+                        <a href="#" class=" hover:text-novis-blue text-[#002B64] font-medium">About Us</a>
+                        <a href="#" class=" hover:text-novis-blue text-[#002B64] font-medium">Our
+                            Brands</a>
+                        <a href="#" class=" hover:text-novis-blue text-[#002B64] font-medium">Products</a>
+                        <a href="#" class=" hover:text-novis-blue text-[#002B64] font-medium">Hire</a>
+                        <a href="#" class=" hover:text-novis-blue text-[#002B64] font-medium">Complex
+                            Rehab</a>
+                        <a href="#" class=" hover:text-novis-blue text-[#002B64] font-medium">Contracts</a>
+                        <a href="#" class=" hover:text-novis-blue text-[#002B64] font-medium">Education</a>
+                        <button class=" hover:text-novis-blue text-[#002B64] font-medium">
+                            <i class="fas fa-search text-xl"></i>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="lg:hidden" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars text-2xl text-gray-700"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobileMenu" class="hidden lg:hidden pb-4">
+                    <div class="flex flex-col space-y-4">
+                        <a href="#" class="text-gray-700 hover:text-novis-blue font-medium">About Us</a>
+                        <a href="#" class="text-gray-700 hover:text-novis-blue font-medium">Our Brands</a>
+                        <a href="#" class="text-gray-700 hover:text-novis-blue font-medium">Products</a>
+                        <a href="#" class="text-gray-700 hover:text-novis-blue font-medium">Hire</a>
+                        <a href="#" class="text-gray-700 hover:text-novis-blue font-medium">Complex Rehab</a>
+                        <a href="#" class="text-gray-700 hover:text-novis-blue font-medium">Contracts</a>
+                        <a href="#" class="text-gray-700 hover:text-novis-blue font-medium">Education</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="pt-16 overflow-hidden bg-[linear-gradient(90deg,#CEE7FE,#CEE7FF,white)] px-8">
+            <div class=" container mx-auto px-4">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="pl-3">
+                        <h1 class="text-4xl lg:text-5xl font-bold text-novis-blue mb-6 leading-tight">
+                            Committed to the Australian Pressure Care Industry and Community
+                        </h1>
+                        <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                            Novis Healthcare is a leading Australian healthcare company specialising in pressure
+                            care
+                            solutions. We provide innovative products and services to healthcare professionals, aged
+                            care facilities and individuals across Australia.
+                        </p>
+                        <button
+                            class="bg-novis-blue text-white px-8 py-3 rounded-md font-semibold hover:bg-blue-800 transition-colors">
+                            About Novis
+                        </button>
+                    </div>
+                    <div class="relative top-[20px] right-[-50px]">
+                        <div class="hero-image-grid">
+                            <img src="./assets/img.jpg" alt="Healthcare"
+                                class="hero-image-1 w-[90%] relative h-[58%] top-[78px] img-shadow">
+                            <img src="./assets/img.jpg" alt="Medical Equipment"
+                                class="hero-image-2 w-[90%] h-full img-shadow">
+                            <img src="./assets/img.jpg" alt="Patient Care"
+                                class="hero-image-3 w-[90%] h-full img-shadow">
+                            <img src="./assets/img.jpg" alt="Healthcare Team"
+                                class="hero-image-4 w-[90%] h-full relative top-[-70px] img-shadow">
+                            <img src="./assets/img.jpg" alt="Healthcare Team"
+                                class="hero-image-4 w-[90%] h-full relative top-[-70px] img-shadow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="py-8 border-b pt-16">
+                <div class="container mx-auto px-4">
+                    <div class="flex items-center justify-end gap-4 text-center">
+                        <div class="flex items-center justify-center space-x-3">
+                            <span
+                                class="text-[#002B64] text-base mr-4 font-semibold relative after:content-[''] after:absolute after:right-[-24px] after:top-1/2  after:-translate-y-1/2 after:w-[14px] after:h-[9px] after:bg-[url('./assets/cloud-color-feather.svg')] after:bg-no-repeat">Experts
+                                in pressure care patient support and complex rehab</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-3">
+                            <span
+                                class="text-[#002B64] text-base mr-4 font-semibold relative after:content-[''] after:absolute after:right-[-24px] after:top-1/2  after:-translate-y-1/2 after:w-[14px] after:h-[9px] after:bg-[url('./assets/cloud-color-feather.svg')] after:bg-no-repeat">Outstanding
+                                customer service</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-3">
+                            <span class="text-[#002B64] text-base mr-4 font-semibold">Serving the healthcare industry
+                                since
+                                2002</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+
+        <!-- Tagline Strip -->
+        <!-- <section class="py-8 border-b">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-end gap-4 text-center">
+                    <div class="flex items-center justify-center space-x-3">
+                        <span
+                            class="text-gray-700 font-medium relative after:content-[''] after:absolute after:right-[-13px] after:top-1/2 after:-translate-y-1/2 after:w-[14px] after:h-[9px] after:bg-[url('./cloud-color-feather.svg')] after:bg-no-repeat">Experts
+                            in pressure care patient support and complex rehab</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-3">
+                        <span
+                            class="text-gray-700 font-medium relative after:content-[''] after:absolute after:right-[-13px] after:top-1/2 after:-translate-y-1/2 after:w-[14px] after:h-[9px] after:bg-[url('./cloud-color-feather.svg')] after:bg-no-repeat">Outstanding
+                            customer service</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-3">
+                        <span class="text-gray-700 font-medium">Serving the healthcare industry since 2002</span>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- </div> -->
+
+        <!-- We Are Specialists In -->
+        <!-- <section class="py-16 bg-gray-50 relative">
+            <svg class="top_split_svg absolute top-0 left-[20px] z-50" xmlns="http://www.w3.org/2000/svg" width="70"
+                height="17" viewBox="0 0 70 17" fill="none">
+                <path
+                    d="M70 0H0L0.000579834 0.0452175L0.204975 0.0454712L1.16621 0.0452309C13.2678 0.0406929 26.4738 6.7523 35.0006 16.5909C42.1673 7.03523 55.0786 0.0400734 68.8349 0.0452309L69.7962 0.0454712C69.8644 0.0454712 69.9326 0.0453873 70.0006 0.0452175L70 0Z"
+                    class="fill-[#CEE7FE]"></path>
+            </svg>
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-novis-blue mb-12">We Are Specialists In</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-novis-blue mb-2">Aged Care</h3>
+                        <p class="text-gray-600">Comprehensive pressure care solutions for the Australian aged care
+                            sector, including equipment and training.</p>
+                    </div>
+                    <a class="relative" href="#">
+                        <svg class="top_split_svg absolute top-0 right-[20px] z-50" xmlns="http://www.w3.org/2000/svg"
+                            width="70" height="17" viewBox="0 0 70 17" fill="none">
+                            <path
+                                d="M70 0H0L0.000579834 0.0452175L0.204975 0.0454712L1.16621 0.0452309C13.2678 0.0406929 26.4738 6.7523 35.0006 16.5909C42.1673 7.03523 55.0786 0.0400734 68.8349 0.0452309L69.7962 0.0454712C69.8644 0.0454712 69.9326 0.0453873 70.0006 0.0452175L70 0Z"
+                                fill="white"></path>
+                        </svg>
+                        <h2 class="service_title">
+                            Service &amp; Repairs </h2>
+                        <img height="200" class="relative " src="./img.jpg" alt="services and repairs">
+                        
+                        <svg class="bottom_split_svg absolute left-[20px] bottom-0" xmlns="http://www.w3.org/2000/svg"
+                            width="77" height="21" viewBox="0 0 77 21" fill="none">
+                            <path
+                                d="M76.1816 23H0.640625V21.0549L0.8612 21.0545L1.89853 21.0548C14.9581 21.0606 29.2094 12.5199 38.4111 0C46.1452 12.1599 60.0785 21.0614 74.9237 21.0548L75.961 21.0545C76.0347 21.0545 76.1082 21.0546 76.1816 21.0549V23Z"
+                                fill="white"></path>
+                        </svg>
+                    </a>
+                    
+                </div>
+            </div>
+        </section> -->
+
+        <section class="mx-auto py-12 px-4 relative px-8">
+            <svg class=" top_split_svg absolute top-0 left-[20px] z-50" xmlns="http://www.w3.org/2000/svg" width="70"
+                height="17" viewBox="0 0 70 17" fill="none">
+                <path
+                    d="M70 0H0L0.000579834 0.0452175L0.204975 0.0454712L1.16621 0.0452309C13.2678 0.0406929 26.4738 6.7523 35.0006 16.5909C42.1673 7.03523 55.0786 0.0400734 68.8349 0.0452309L69.7962 0.0454712C69.8644 0.0454712 69.9326 0.0453873 70.0006 0.0452175L70 0Z"
+                    class="fill-[#CEE7FE]"></path>
+            </svg>
+            <h2 class="text-center text-2xl font-bold text-blue-800 mb-8">We Are Specialists In</h2>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+
+                <div class="space-y-4">
+                    <div>
+                        <button
+                            class="w-full text-left pb-2 font-semibold text-[#75A5D6] text-blue-800 accordion-btn active"
+                            data-target="aged-care">
+                            Aged Care
+                        </button>
+                        <div class="accordion-content mt-2 text-gray-600 border-b-2 border-[#75A5D6] pb-2">
+                            Novis has been providing Aged Care equipment for the best clinical outcomes since 2003.
+                            We work with architects, builders, aged care facilities, and project managers to find the
+                            best
+                            solutions.
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="w-full text-left border-b pb-2 text-[#75A5D6] accordion-btn"
+                            data-target="complex">
+                            Complex
+                        </button>
+                        <div class="accordion-content hidden mt-2 text-gray-600">
+                            We provide tailored solutions for complex care environments to support patients with
+                            specific needs.
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="w-full text-left border-b pb-2 text-[#75A5D6] accordion-btn"
+                            data-target="hospital">
+                            Hospital
+                        </button>
+                        <div class="accordion-content hidden mt-2 text-gray-600">
+                            Our hospital solutions are designed to meet clinical demands, improve patient comfort, and
+                            support
+                            caregivers.
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="w-full text-left border-b pb-2 text-[#75A5D6] accordion-btn"
+                            data-target="home-care">
+                            In Home Care
+                        </button>
+                        <div class="accordion-content hidden mt-2 text-gray-600">
+                            Bringing care home with innovative equipment that enhances safety, mobility, and quality of
+                            life for
+                            patients.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="relative">
+                    <svg class="top_split_svg absolute top-0 right-[20px] z-50" xmlns="http://www.w3.org/2000/svg"
+                        width="70" height="17" viewBox="0 0 70 17" fill="none">
+                        <path
+                            d="M70 0H0L0.000579834 0.0452175L0.204975 0.0454712L1.16621 0.0452309C13.2678 0.0406929 26.4738 6.7523 35.0006 16.5909C42.1673 7.03523 55.0786 0.0400734 68.8349 0.0452309L69.7962 0.0454712C69.8644 0.0454712 69.9326 0.0453873 70.0006 0.0452175L70 0Z"
+                            fill="white"></path>
+                    </svg>
+                    <img id="specialistImage" src="./assets/img.jpg" alt="Specialist Image"
+                        class="w-full h-auto rounded-md object-cover">
+                    <svg class="bottom_split_svg absolute left-[20px] bottom-0" xmlns="http://www.w3.org/2000/svg"
+                        width="77" height="21" viewBox="0 0 77 21" fill="none">
+                        <path
+                            d="M76.1816 23H0.640625V21.0549L0.8612 21.0545L1.89853 21.0548C14.9581 21.0606 29.2094 12.5199 38.4111 0C46.1452 12.1599 60.0785 21.0614 74.9237 21.0548L75.961 21.0545C76.0347 21.0545 76.1082 21.0546 76.1816 21.0549V23Z"
+                            fill="white"></path>
+                    </svg>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Our Key Services -->
+        <!-- <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-novis-blue mb-12">Our Key Services</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div
+                        class="bg-novis-blue bg-[url('./assets/key-service-2.png')] relative bg-cover py-22 text-white rounded-lg p-8 text-center hover:bg-blue-800 transition-colors">
+                        <svg class="top_split_svg absolute top-0 right-[20px] z-50" xmlns="http://www.w3.org/2000/svg"
+                            width="70" height="17" viewBox="0 0 70 17" fill="none">
+                            <path
+                                d="M70 0H0L0.000579834 0.0452175L0.204975 0.0454712L1.16621 0.0452309C13.2678 0.0406929 26.4738 6.7523 35.0006 16.5909C42.1673 7.03523 55.0786 0.0400734 68.8349 0.0452309L69.7962 0.0454712C69.8644 0.0454712 69.9326 0.0453873 70.0006 0.0452175L70 0Z"
+                                fill="white"></path>
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-4">Service & Repairs</h3>
+                        <svg class="bottom_split_svg absolute left-[20px] bottom-0" xmlns="http://www.w3.org/2000/svg"
+                            width="77" height="21" viewBox="0 0 77 21" fill="none">
+                            <path
+                                d="M76.1816 23H0.640625V21.0549L0.8612 21.0545L1.89853 21.0548C14.9581 21.0606 29.2094 12.5199 38.4111 0C46.1452 12.1599 60.0785 21.0614 74.9237 21.0548L75.961 21.0545C76.0347 21.0545 76.1082 21.0546 76.1816 21.0549V23Z"
+                                fill="white"></path>
+                        </svg>
+                    </div>
+                    <div
+                        class="bg-novis-blue bg-[url('./assets/key-service-3.png')] relative bg-cover py-22 text-white rounded-lg p-8 text-center hover:bg-blue-800 transition-colors">
+
+                        <svg class="top_split_svg absolute top-0 right-[20px] z-50" xmlns="http://www.w3.org/2000/svg"
+                            width="70" height="17" viewBox="0 0 70 17" fill="none">
+                            <path
+                                d="M70 0H0L0.000579834 0.0452175L0.204975 0.0454712L1.16621 0.0452309C13.2678 0.0406929 26.4738 6.7523 35.0006 16.5909C42.1673 7.03523 55.0786 0.0400734 68.8349 0.0452309L69.7962 0.0454712C69.8644 0.0454712 69.9326 0.0453873 70.0006 0.0452175L70 0Z"
+                                fill="white"></path>
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-4">Installations & Modifications</h3>
+                        <svg class="bottom_split_svg absolute left-[20px] bottom-0" xmlns="http://www.w3.org/2000/svg"
+                            width="77" height="21" viewBox="0 0 77 21" fill="none">
+                            <path
+                                d="M76.1816 23H0.640625V21.0549L0.8612 21.0545L1.89853 21.0548C14.9581 21.0606 29.2094 12.5199 38.4111 0C46.1452 12.1599 60.0785 21.0614 74.9237 21.0548L75.961 21.0545C76.0347 21.0545 76.1082 21.0546 76.1816 21.0549V23Z"
+                                fill="white"></path>
+                        </svg>
+                    </div>
+                    <div
+                        class="bg-novis-blue bg-[url('./assets/key-service-1.png')] relative bg-cover py-22 text-white rounded-lg p-8 text-center hover:bg-blue-800 transition-colors">
+
+                        <svg class="top_split_svg absolute top-0 right-[20px] z-50" xmlns="http://www.w3.org/2000/svg"
+                            width="70" height="17" viewBox="0 0 70 17" fill="none">
+                            <path
+                                d="M70 0H0L0.000579834 0.0452175L0.204975 0.0454712L1.16621 0.0452309C13.2678 0.0406929 26.4738 6.7523 35.0006 16.5909C42.1673 7.03523 55.0786 0.0400734 68.8349 0.0452309L69.7962 0.0454712C69.8644 0.0454712 69.9326 0.0453873 70.0006 0.0452175L70 0Z"
+                                fill="white"></path>
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-4">Hire</h3>
+                        <svg class="bottom_split_svg absolute left-[20px] bottom-0" xmlns="http://www.w3.org/2000/svg"
+                            width="77" height="21" viewBox="0 0 77 21" fill="none">
+                            <path
+                                d="M76.1816 23H0.640625V21.0549L0.8612 21.0545L1.89853 21.0548C14.9581 21.0606 29.2094 12.5199 38.4111 0C46.1452 12.1599 60.0785 21.0614 74.9237 21.0548L75.961 21.0545C76.0347 21.0545 76.1082 21.0546 76.1816 21.0549V23Z"
+                                fill="white"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section class="py-16 bg-white">
+            <div class=" container mx-auto px-8">
+                <!-- Gradient Heading -->
+                <!-- <h2
+                    class="text-3xl font-bold text-center mb-12 bg-[linear-gradient(100.55deg, #006FDE_0.29%, #002B64_100.13%)] bg-clip-text text-transparent">
+                    Our Key Services
+                </h2> -->
+                <h2 class="text-3xl font-bold text-center mb-12 
+                         bg-[linear-gradient(100.55deg,#006FDE_0.29%,#002B64_100.13%)] 
+                         bg-clip-text text-transparent">
+                    Our Key Services
+                </h2>
+
+
+                <!-- Services Grid -->
+                <div class="grid gap-8 md:grid-cols-3">
+
+                    <!-- Service 1 -->
+                    <div
+                        class="relative bg-[url('./assets/key-service-2.png')] bg-cover bg-center rounded-lg py-[82px] p-8 flex items-center justify-center text-white text-center">
+                        <!-- Top Decoration -->
+                        <svg class="top_split_svg absolute top-0 right-[20px] z-10" xmlns="http://www.w3.org/2000/svg"
+                            width="70" height="17" viewBox="0 0 70 17" fill="none">
+                            <path
+                                d="M70 0H0L0.000579834 0.0452175L0.204975 0.0454712L1.16621 0.0452309C13.2678 0.0406929 26.4738 6.7523 35.0006 16.5909C42.1673 7.03523 55.0786 0.0400734 68.8349 0.0452309L69.7962 0.0454712C69.8644 0.0454712 69.9326 0.0453873 70.0006 0.0452175L70 0Z"
+                                fill="white" />
+                        </svg>
+
+                        <!-- Service Title -->
+                        <h3 class="text-xl font-semibold z-20">Service & Repairs</h3>
+
+                        <!-- Bottom Decoration -->
+                        <svg class="bottom_split_svg absolute left-[20px] bottom-0 z-10"
+                            xmlns="http://www.w3.org/2000/svg" width="77" height="21" viewBox="0 0 77 21" fill="none">
+                            <path
+                                d="M76.1816 23H0.640625V21.0549L0.8612 21.0545L1.89853 21.0548C14.9581 21.0606 29.2094 12.5199 38.4111 0C46.1452 12.1599 60.0785 21.0614 74.9237 21.0548L75.961 21.0545C76.0347 21.0545 76.1082 21.0546 76.1816 21.0549V23Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div
+                        class="relative bg-[url('./assets/key-service-3.png')] bg-cover bg-center rounded-lg py-[82px] p-8 flex items-center justify-center text-white text-center">
+                        <svg class="top_split_svg absolute top-0 right-[20px] z-10" xmlns="http://www.w3.org/2000/svg"
+                            width="70" height="17" viewBox="0 0 70 17" fill="none">
+                            <path
+                                d="M70 0H0L0.000579834 0.0452175L0.204975 0.0454712L1.16621 0.0452309C13.2678 0.0406929 26.4738 6.7523 35.0006 16.5909C42.1673 7.03523 55.0786 0.0400734 68.8349 0.0452309L69.7962 0.0454712C69.8644 0.0454712 69.9326 0.0453873 70.0006 0.0452175L70 0Z"
+                                fill="white" />
+                        </svg>
+                        <h3 class="text-xl font-semibold z-20">Installations & Modifications</h3>
+                        <svg class="bottom_split_svg absolute left-[20px] bottom-0 z-10"
+                            xmlns="http://www.w3.org/2000/svg" width="77" height="21" viewBox="0 0 77 21" fill="none">
+                            <path
+                                d="M76.1816 23H0.640625V21.0549L0.8612 21.0545L1.89853 21.0548C14.9581 21.0606 29.2094 12.5199 38.4111 0C46.1452 12.1599 60.0785 21.0614 74.9237 21.0548L75.961 21.0545C76.0347 21.0545 76.1082 21.0546 76.1816 21.0549V23Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div
+                        class="relative bg-[url('./assets/key-service-1.png')] bg-cover bg-center rounded-lg py-[82px] p-8 flex items-center justify-center text-white text-center">
+                        <svg class="top_split_svg absolute top-0 right-[20px] z-10" xmlns="http://www.w3.org/2000/svg"
+                            width="70" height="17" viewBox="0 0 70 17" fill="none">
+                            <path
+                                d="M70 0H0L0.000579834 0.0452175L0.204975 0.0454712L1.16621 0.0452309C13.2678 0.0406929 26.4738 6.7523 35.0006 16.5909C42.1673 7.03523 55.0786 0.0400734 68.8349 0.0452309L69.7962 0.0454712C69.8644 0.0454712 69.9326 0.0453873 70.0006 0.0452175L70 0Z"
+                                fill="white" />
+                        </svg>
+                        <h3 class="text-xl font-semibold z-20">Hire</h3>
+                        <svg class="bottom_split_svg absolute left-[20px] bottom-0 z-10"
+                            xmlns="http://www.w3.org/2000/svg" width="77" height="21" viewBox="0 0 77 21" fill="none">
+                            <path
+                                d="M76.1816 23H0.640625V21.0549L0.8612 21.0545L1.89853 21.0548C14.9581 21.0606 29.2094 12.5199 38.4111 0C46.1452 12.1599 60.0785 21.0614 74.9237 21.0548L75.961 21.0545C76.0347 21.0545 76.1082 21.0546 76.1816 21.0549V23Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Our Brand Portfolio -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-novis-blue mb-12">Our Brand Portfolio</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+                    <img src="./assets/Brands-Molift.png" alt="Molift"
+                        class="h-12 mx-auto grayscale hover:grayscale-0 transition-all">
+                    <img src="./assets/Brands-Etac.png" alt="Etac"
+                        class="h-12 mx-auto grayscale hover:grayscale-0 transition-all">
+                    <img src="./assets/Brands-Netti.png" alt="Netti"
+                        class="h-12 mx-auto grayscale hover:grayscale-0 transition-all">
+                    <img src="./assets/Brands-TA.png" alt="Star"
+                        class="h-12 mx-auto grayscale hover:grayscale-0 transition-all">
+                    <img src="./assets/DietzPower.png" alt="Dietz Power"
+                        class="h-12 mx-auto grayscale hover:grayscale-0 transition-all">
+                    <img src="./assets/TA.png" alt="AreaCare"
+                        class="h-12 mx-auto grayscale hover:grayscale-0 transition-all">
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Product -->
+        <!-- <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="bg-gray-50 rounded-lg p-8">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <img src="/placeholder.svg?height=400&width=500" alt="Etac Prio" class="w-full rounded-lg">
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-novis-blue mb-4">Etac Prio: Design with care, customise
+                                to user's ability</h3>
+                            <p class="text-gray-600 mb-6">The Etac Prio wheelchair provides a high level of comfort and
+                                support for users. With its modular design, the chair can be customized to meet
+                                individual needs and preferences.</p>
+                            <button
+                                class="bg-novis-blue text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-800 transition-colors">
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-8 space-x-2">
+                        <button class="w-3 h-3 rounded-full bg-novis-blue"></button>
+                        <button class="w-3 h-3 rounded-full bg-gray-300"></button>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- slider working -->
+        <section class="py-16 bg-white">
+            <div class="mx-auto my-8 bg-white rounded-lg overflow-hidden">
+                <div class="flex flex-col md:flex-row items-center p-6 space-y-4 md:space-y-0 md:space-x-6">
+                    <!-- Image -->
+                    <div class="w-full md:w-1/2 relative">
+                        <svg class=" top_split_svg absolute top-0 right-[20px] z-50" xmlns="http://www.w3.org/2000/svg"
+                            width="70" height="17" viewBox="0 0 70 17" fill="none">
+                            <path
+                                d="M70 0H0L0.000579834 0.0452175L0.204975 0.0454712L1.16621 0.0452309C13.2678 0.0406929 26.4738 6.7523 35.0006 16.5909C42.1673 7.03523 55.0786 0.0400734 68.8349 0.0452309L69.7962 0.0454712C69.8644 0.0454712 69.9326 0.0453873 70.0006 0.0452175L70 0Z"
+                                class="fill-[white]"></path>
+                        </svg>
+                        <img id="slide-image" src="https://via.placeholder.com/600x400" alt="Slide Image"
+                            class="w-full rounded-lg object-cover" />
+                        <svg class="bottom_split_svg absolute left-[20px] bottom-0" xmlns="http://www.w3.org/2000/svg"
+                            width="77" height="21" viewBox="0 0 77 21" fill="none">
+                            <path
+                                d="M76.1816 23H0.640625V21.0549L0.8612 21.0545L1.89853 21.0548C14.9581 21.0606 29.2094 12.5199 38.4111 0C46.1452 12.1599 60.0785 21.0614 74.9237 21.0548L75.961 21.0545C76.0347 21.0545 76.1082 21.0546 76.1816 21.0549V23Z"
+                                fill="white"></path>
+                        </svg>
+                    </div>
+
+                    <!-- Text Content -->
+                    <div class="w-full md:w-1/2 space-y-4 min-h-[280px] flex flex-col justify-center">
+                        <h4 class="text-blue-600 font-bold text-sm">FEATURED PRODUCT</h4>
+                        <h2 id="slide-title" class="text-2xl font-semibold">
+                            Etac Prio: Design with care, customise to user's ability.
+                        </h2>
+                        <p id="slide-desc" class="text-gray-600">
+                            The Etac Prio wheelchair provides a high level of customisation, adaptability and care for
+                            users.
+                            This tilt
+                            in space and reclining wheelchair allows for frequent repositioning and long term seating.
+                        </p>
+                        <button class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800">Learn more</button>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="flex space-x-4 mt-4 md:mt-0">
+                        <button onclick="prevSlide()" class="p-2 bg-gray-200 rounded hover:bg-gray-300">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button onclick="nextSlide()" class="p-2 bg-gray-200 rounded hover:bg-gray-300">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Catalogues -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center mb-8">
+                    <h2 class="text-3xl font-bold text-novis-blue mr-4">Catalogues</h2>
+                    <a href="#" class="text-novis-blue font-semibold mt-[4px] hover:underline">View All Catalogues</a>
+                </div>
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="bg-white rounded overflow-hidden hover:shadow-lg transition-shadow">
+                        <div class="relative">
+                            <img src="./assets/key-service-1.png" alt="Novis Branded Catalogue"
+                                class="w-full h-48 object-cover">
+                            <svg class="bottom_split_svg absolute left-[20px] bottom-0"
+                                xmlns="http://www.w3.org/2000/svg" width="77" height="21" viewBox="0 0 77 21"
+                                fill="none">
+                                <path
+                                    d="M76.1816 23H0.640625V21.0549L0.8612 21.0545L1.89853 21.0548C14.9581 21.0606 29.2094 12.5199 38.4111 0C46.1452 12.1599 60.0785 21.0614 74.9237 21.0548L75.961 21.0545C76.0347 21.0545 76.1082 21.0546 76.1816 21.0549V23Z"
+                                    fill="white"></path>
+                            </svg>
+                        </div>
+                        <div class="py-6 flex justify-between items-start">
+
+                            <div>
+                                <h3 class="text-xl font-semibold text-[#002B64] mb-2">Novis Branded Catalogue</h3>
+                                <button class="text-[#CEE7FE] font-semibold hover:underline">View Catalogue</button>
+                            </div>
+                            <a href="#" class="bg-[#002B64] rounded-full p-[4px_12px_6px]"><i
+                                    class="fas fa-chevron-right text-white text-[14px]"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded overflow-hidden hover:shadow-lg transition-shadow">
+                        <div class="relative">
+                            <img src="./assets/key-service-1.png" alt="Pressure Injury Prevention"
+                                class="w-full h-48 object-cover">
+                            <svg class="bottom_split_svg absolute left-[20px] bottom-0"
+                                xmlns="http://www.w3.org/2000/svg" width="77" height="21" viewBox="0 0 77 21"
+                                fill="none">
+                                <path
+                                    d="M76.1816 23H0.640625V21.0549L0.8612 21.0545L1.89853 21.0548C14.9581 21.0606 29.2094 12.5199 38.4111 0C46.1452 12.1599 60.0785 21.0614 74.9237 21.0548L75.961 21.0545C76.0347 21.0545 76.1082 21.0546 76.1816 21.0549V23Z"
+                                    fill="white"></path>
+                            </svg>
+                        </div>
+                        <div class="py-6 flex justify-between items-start">
+
+                            <div>
+                                <h3 class="text-xl font-semibold text-[#002B64] mb-2">Pressure Injury Prevention
+                                    Resource
+                                    Catalogue</h3>
+                                <button class="text-[#CEE7FE] font-semibold hover:underline">View Catalogue</button>
+                            </div>
+                            <a href="#" class="bg-[#002B64] rounded-full p-[4px_12px_6px]"><i
+                                    class="fas fa-chevron-right text-white text-[14px]"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded overflow-hidden hover:shadow-lg transition-shadow">
+                        <div class="relative">
+                            <img src="./assets/key-service-1.png" alt="Community Hire" class="w-full h-48 object-cover">
+                            <svg class="bottom_split_svg absolute left-[20px] bottom-0"
+                                xmlns="http://www.w3.org/2000/svg" width="77" height="21" viewBox="0 0 77 21"
+                                fill="none">
+                                <path
+                                    d="M76.1816 23H0.640625V21.0549L0.8612 21.0545L1.89853 21.0548C14.9581 21.0606 29.2094 12.5199 38.4111 0C46.1452 12.1599 60.0785 21.0614 74.9237 21.0548L75.961 21.0545C76.0347 21.0545 76.1082 21.0546 76.1816 21.0549V23Z"
+                                    fill="white"></path>
+                            </svg>
+                        </div>
+                        <div class="py-6 flex justify-between items-start">
+
+                            <div>
+                                <h3 class="text-xl font-semibold text-[#002B64] mb-2">Community Hire catalogue</h3>
+                                <button class="text-[#CEE7FE] font-semibold hover:underline">View Catalogue</button>
+                            </div>
+                            <a href="#" class="bg-[#002B64] rounded-full p-[4px_12px_6px]"><i
+                                    class="fas fa-chevron-right text-white text-[14px]"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trusted Network -->
+        <section class="py-16 bg-white">
+            <!-- <div class="container mx-auto px-4">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="/placeholder.svg?height=300&width=400" alt="Trusted Network"
+                            class="w-full rounded-lg">
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold text-novis-blue mb-6">Nationally supported by our trusted network
+                        </h2>
+                        <p class="text-gray-600 mb-6">Find your nearest Novis representative or service center.</p>
+                        <div class="flex space-x-2">
+                            <input type="text" placeholder="Enter postcode"
+                                class="flex-1 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-novis-blue">
+                            <button
+                                class="bg-novis-blue text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-800 transition-colors">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div
+                class="max-w-6xl mx-auto my-8 bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row items-center gap-6">
+                <div class="w-full md:w-1/3">
+                    <img src="./assets/key-service-3.png" alt="Hands" class="rounded-lg object-cover w-full" />
+                </div>
+                <div class="flex-1 space-y-4">
+                    <h3 class="text-blue-700 font-bold text-lg">Nationally supported by our trusted network</h3>
+                    <p class="text-gray-600 text-sm">Find your nearest retail location</p>
+                    <div class="flex gap-3">
+                        <input type="text" placeholder="Enter postcode or suburb here"
+                            class="flex-1 border border-gray-300 rounded-lg p-2" />
+                        <select class="border border-gray-300 rounded-lg p-2">
+                            <option>Within 10km</option>
+                            <option>Within 20km</option>
+                            <option>Within 50km</option>
+                        </select>
+                        <button class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800">Find</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Webinar -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-novis-blue mb-12">Upcoming Webinar</h2>
+                <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-8 text-center">
+                    <i class="fas fa-video text-4xl text-novis-blue mb-4"></i>
+                    <h3 class="text-2xl font-bold text-novis-blue mb-4">Pressure Injury Prevention</h3>
+                    <p class="text-gray-600 mb-6">Join our experts for an informative session on pressure injury
+                        prevention strategies and best practices in healthcare settings.</p>
+                    <button
+                        class="bg-novis-blue text-white px-8 py-3 rounded-md font-semibold hover:bg-blue-800 transition-colors">
+                        Register to attend
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest News -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-novis-blue mb-12">Latest News</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                        <img src="/placeholder.svg?height=200&width=300" alt="News 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm text-gray-500">March 15, 2024</span>
+                            <h3 class="text-xl font-semibold text-novis-blue mb-2 mt-2">Our New Employee Development
+                                Program</h3>
+                            <p class="text-gray-600 mb-4">We're excited to announce our comprehensive employee
+                                development program designed to enhance skills and career growth.</p>
+                            <a href="#" class="text-novis-blue font-semibold hover:underline">Read More</a>
+                        </div>
+                    </article>
+                    <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                        <img src="/placeholder.svg?height=200&width=300" alt="News 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm text-gray-500">March 10, 2024</span>
+                            <h3 class="text-xl font-semibold text-novis-blue mb-2 mt-2">New Comfort Solutions Chair
+                                Available Now</h3>
+                            <p class="text-gray-600 mb-4">Introducing our latest comfort solutions chair with advanced
+                                pressure care technology and customizable features.</p>
+                            <a href="#" class="text-novis-blue font-semibold hover:underline">Read More</a>
+                        </div>
+                    </article>
+                    <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                        <img src="/placeholder.svg?height=200&width=300" alt="News 3" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm text-gray-500">March 5, 2024</span>
+                            <h3 class="text-xl font-semibold text-novis-blue mb-2 mt-2">Meet Novis at Industry
+                                Conference</h3>
+                            <p class="text-gray-600 mb-4">Join us at the upcoming healthcare industry conference where
+                                we'll showcase our latest innovations and solutions.</p>
+                            <a href="#" class="text-novis-blue font-semibold hover:underline">Read More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="py-16 bg-novis-blue">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold text-white mb-6">Stay Up To Date</h2>
+                <p class="text-blue-100 mb-8 max-w-2xl mx-auto">Keep up to date with Novis Healthcare by subscribing to
+                    our newsletter for the latest news, product updates, and industry insights.</p>
+                <div class="max-w-md mx-auto flex space-x-2">
+                    <input type="email" placeholder="Enter your email"
+                        class="flex-1 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300">
+                    <button
+                        class="bg-white text-novis-blue px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-novis-blue mb-12">Don't just take our word for it</h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white rounded-lg shadow-md p-8 text-center">
+                        <div class="flex justify-center mb-4">
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-lg mb-6 italic">"The team at Novis Healthcare has been exceptional
+                            in providing quality equipment and outstanding customer service. Their expertise in pressure
+                            care solutions has made a significant difference in our facility."</p>
+                        <div class="font-semibold text-novis-blue">Jeanette O'Brien</div>
+                        <div class="text-gray-500">Facility Manager</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+                    <img src="/placeholder.svg?height=80&width=120" alt="ACCPA" class="h-16 mx-auto">
+                    <img src="/placeholder.svg?height=80&width=120" alt="ATSA" class="h-16 mx-auto">
+                    <img src="/placeholder.svg?height=80&width=120" alt="NDIS" class="h-16 mx-auto">
+                    <img src="/placeholder.svg?height=80&width=120" alt="Google Rating" class="h-16 mx-auto">
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-novis-blue text-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">CUSTOMER INFO</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-blue-200 hover:text-white">About Us</a></li>
+                            <li><a href="#" class="text-blue-200 hover:text-white">Contact Us</a></li>
+                            <li><a href="#" class="text-blue-200 hover:text-white">Store Locator</a></li>
+                            <li><a href="#" class="text-blue-200 hover:text-white">Privacy Policy</a></li>
+                            <li><a href="#" class="text-blue-200 hover:text-white">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">MEMBER ACCESS</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-blue-200 hover:text-white">Member Login</a></li>
+                            <li><a href="#" class="text-blue-200 hover:text-white">Wholesale</a></li>
+                            <li><a href="#" class="text-blue-200 hover:text-white">Contracts</a></li>
+                            <li><a href="#" class="text-blue-200 hover:text-white">Pricing</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">EDUCATION</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-blue-200 hover:text-white">Training Courses</a></li>
+                            <li><a href="#" class="text-blue-200 hover:text-white">Webinars</a></li>
+                            <li><a href="#" class="text-blue-200 hover:text-white">Resources</a></li>
+                            <li><a href="#" class="text-blue-200 hover:text-white">Clinical Guidelines</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">CONTACT US</h4>
+                        <div class="space-y-4">
+                            <div>
+                                <h5 class="font-semibold">VIC</h5>
+                                <p class="text-blue-200 text-sm">123 Healthcare St, Melbourne VIC 3000</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold">QLD</h5>
+                                <p class="text-blue-200 text-sm">456 Medical Ave, Brisbane QLD 4000</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold">NSW</h5>
+                                <p class="text-blue-200 text-sm">789 Care Rd, Sydney NSW 2000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-blue-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                    <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                        <img src="/placeholder.svg?height=40&width=100" alt="Novis" class="h-8">
+                        <span class="text-blue-200">© 2024 Novis Healthcare. All rights reserved.</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-blue-200 hover:text-white">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-blue-200 hover:text-white">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" class="text-blue-200 hover:text-white">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="#" class="text-blue-200 hover:text-white">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            function toggleMobileMenu() {
+                const menu = document.getElementById('mobileMenu');
+                menu.classList.toggle('hidden');
+            }
+
+
+            // dropdown
+            const buttons = document.querySelectorAll(".accordion-btn");
+            const contents = document.querySelectorAll(".accordion-content");
+            const image = document.getElementById("specialistImage");
+
+            const images = {
+                "aged-care": "./assets/img.jpg",
+                "complex": "./assets/img.jpg",
+                "hospital": "./assets/img.jpg",
+                "home-care": "./assets/img.jpg",
+            };
+
+            buttons.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    // Reset all
+                    buttons.forEach(b => b.classList.remove("font-semibold", 'text-blue-800', "border-b-2"));
+                    buttons.forEach(b => b.classList.add("border-b"));
+                    contents.forEach(c => c.classList.add("hidden"));
+
+                    // Activate clicked
+                    btn.classList.add("font-semibold", "text-blue-800");
+                    const content = btn.nextElementSibling;
+                    content.classList.remove("hidden");
+                    btn.classList.remove("border-b");
+                    content.classList.add("border-b-2", "border-[#75A5D6]", "pb-2");
+
+                    // Change image
+                    const target = btn.getAttribute("data-target");
+                    image.src = images[ target ];
+                });
+            });
+
+
+
+            // Simple carousel functionality for featured product
+            // let currentSlide = 0;
+            // const slides = document.querySelectorAll('.carousel-slide');
+
+            // function showSlide(index) {
+            //     slides.forEach((slide, i) => {
+            //         slide.style.display = i === index ? 'block' : 'none';
+            //     });
+            // }
+
+            // // Auto-advance carousel every 5 seconds
+            // setInterval(() => {
+            //     currentSlide = (currentSlide + 1) % slides.length;
+            //     showSlide(currentSlide);
+            // }, 5000);
+
+
+            // slider product
+            const slides = [
+                {
+                    image: "./assets/key-service-2.png",
+                    title: "Etac Prio: Design with care, customise to user's ability.",
+                    description: "The Etac Prio wheelchair provides a high level of customisation, adaptability and care for users. This tilt in space and reclining wheelchair allows for frequent repositioning and long term seating."
+                },
+                {
+                    image: "./assets/key-service-3.png",
+                    title: "Comfortable Patient Beds",
+                    description: "Designed for maximum patient comfort and hospital efficiency."
+                },
+                {
+                    image: "./assets/key-service-1.png",
+                    title: "Advanced Care Solutions",
+                    description: "Innovative healthcare solutions tailored to every need."
+                }
+            ];
+
+            let currentIndex = 0;
+
+            function showSlide(index) {
+                const slide = slides[ index ];
+                document.getElementById("slide-image").src = slide.image;
+                document.getElementById("slide-title").textContent = slide.title;
+                document.getElementById("slide-desc").textContent = slide.description;
+            }
+
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                showSlide(currentIndex);
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                showSlide(currentIndex);
+            }
+
+            // Initialize the slider
+            showSlide(currentIndex);
+        </script>
+    </body>
+
+</html>
