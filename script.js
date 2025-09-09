@@ -1,16 +1,37 @@
+// function toggleMobileMenu() {
+//   const menu = document.getElementById("mobileMenu");
+//   const icon = document.getElementById("menuIcon");
+
+//   menu.classList.toggle("hidden");
+
+//   // Toggle icon
+//   if (menu.classList.contains("hidden")) {
+//     icon.classList.remove("fa-times");
+//     icon.classList.add("fa-bars");
+//   } else {
+//     icon.classList.remove("fa-bars");
+//     icon.classList.add("fa-times");
+//   }
+// }
+
 function toggleMobileMenu() {
   const menu = document.getElementById("mobileMenu");
   const icon = document.getElementById("menuIcon");
 
-  menu.classList.toggle("hidden");
+  if (menu.classList.contains("max-h-0")) {
+    // Open menu
+    menu.classList.remove("max-h-0", "opacity-0");
+    menu.classList.add("max-h-screen", "opacity-100");
 
-  // Toggle icon
-  if (menu.classList.contains("hidden")) {
-    icon.classList.remove("fa-times");
-    icon.classList.add("fa-bars");
-  } else {
     icon.classList.remove("fa-bars");
     icon.classList.add("fa-times");
+  } else {
+    // Close menu
+    menu.classList.remove("max-h-screen", "opacity-100");
+    menu.classList.add("max-h-0", "opacity-0");
+
+    icon.classList.remove("fa-times");
+    icon.classList.add("fa-bars");
   }
 }
 
