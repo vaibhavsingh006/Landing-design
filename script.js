@@ -33,13 +33,25 @@ buttons.forEach((btn) => {
   btn.addEventListener("click", () => {
     buttons.forEach((b) => b.classList.remove("text-blue-800", "border-b-2"));
     buttons.forEach((b) => b.classList.add("border-b", "font-semibold"));
-    contents.forEach((c) => c.classList.add("hidden"));
+
+    contents.forEach((c) => {
+      c.classList.remove("max-h-40", "opacity-100", "border-b-2");
+      c.classList.add("max-h-0", "opacity-0", "overflow-hidden");
+    });
 
     btn.classList.add("text-blue-800");
     const content = btn.nextElementSibling;
-    content.classList.remove("hidden");
+
+    // expand smoothly
+    content.classList.remove("max-h-0", "opacity-0");
+    content.classList.add(
+      "max-h-40",
+      "opacity-100",
+      "border-b-2",
+      "border-[#75A5D6]",
+      "pb-2"
+    );
     btn.classList.remove("border-b");
-    content.classList.add("border-b-2", "border-[#75A5D6]", "pb-2");
 
     const target = btn.getAttribute("data-target");
     image.src = images[target];
